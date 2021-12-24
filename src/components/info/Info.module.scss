@@ -1,0 +1,107 @@
+.info{
+    &__title{
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 61px;
+        color: #2D445B;
+        margin-bottom: 40px;
+        span{
+            color: #FF5D51;
+        }
+    }
+    &__description{
+        font-size: 22px;
+        line-height: 150%;
+        color: #2D445B;
+        margin-bottom: 40px;
+        span{
+            font-weight: bold;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        margin-bottom: 54px;
+    }
+    &__btn{
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        max-width: 220px;
+        width: 100%;
+        padding: 14px 0;
+        text-align: center;
+    }
+    &__btnLeft{
+        background: #FF5D51;
+        box-shadow: 3px 4px 0px #A81F1F;
+        border-radius: 20px;
+        color: #FFFFFF;
+        text-shadow: -3px 2px 0px #423231;
+        transition: all .3s;
+        &:hover{
+            background-color: #c9473e;
+        }
+    }
+    &__btnRight{
+        margin-left: 27px;
+        color: #000000;
+        background: #FFFFFF;
+        border: 3px solid #161101;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 0px #161101;
+        border-radius: 20px;
+        transition: all .3s;
+        &:hover{
+            background-color: #161101;
+            color: #fff;
+        }
+    }
+    &__social{
+        display: flex;
+        grid-gap: 30px;
+    }
+    &__item{
+        max-width: 40px;
+        img{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .info{
+        &__title{
+            margin-top: 0;
+        }
+        &__social{
+            padding-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .info{
+        &__title{
+            font-size: 50px;
+            line-height: 61px;
+            span{
+                white-space: nowrap;
+                font-size: 48px;
+            }
+        }
+        &__description{
+            margin-bottom: 380px;
+        }
+        &__btn{
+            max-width: 180px;
+            font-size: 24px;
+            line-height: 30px;
+            padding: 11px 0;
+            &:nth-child(2){
+                padding: 9px 0;
+                font-size: 22px;
+                background-image: linear-gradient();
+            }
+        }
+    }
+}

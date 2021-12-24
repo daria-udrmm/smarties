@@ -1,0 +1,139 @@
+.last{
+    background: #A4C8ED;
+    padding: 80px 0 200px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: '';
+        background-image: url('../../resources/img/men.png');
+        bottom: 10px;
+        right: calc((100vw - 1440px) / 2);
+        background-repeat: no-repeat;
+        background-size: contain;
+        max-width: 820px;
+        width: 100%;
+        max-height: 330px;
+        height: 100%;
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url('../../resources/img/blackLine.svg');
+        bottom: -12px;
+        width: 100%;
+        max-height: 40px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 2;
+    }
+    &__title{
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 61px;
+        color: #2D445B;
+        margin-bottom: 25px;
+    }
+    &__description{
+        font-size: 22px;
+        line-height: 150%;
+        color: #2D445B;
+        margin-bottom: 48px;
+    }
+    &__buttons{
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__btn{
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        border: 3px solid #161101;
+        color: #000000;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 100%;
+        text-align: center;
+        a{
+            padding: 16px 0;
+            width: 100%;
+        }
+    }
+    &__community{
+        background: #FFFFFF;
+        box-shadow: 2px 2px 0px #161101;
+        max-width: 294px;
+        transition: all .3s;
+        &:hover{
+            background-color: #161101;
+            color: #fff;
+        }
+    }
+    &__whitelist{
+        filter: drop-shadow(2px 2px 0px #161101);
+        max-width: 225px;
+        background: #A4C8ED;
+        transition: all .3s;
+        &:hover{
+            background-color: #161101;
+            color: #A4C8ED;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .last{
+        padding: 40px 0px 260px;
+        &::after{
+            max-width: 600px;
+            max-height: 240px;
+        }
+    }
+}
+@media (max-width: 576px){
+    .last{
+        padding: 0 0 76px;
+        &::after{
+            right: -211px;
+            width: 100vw;
+            height: 40vw;
+            bottom: 0;
+        }
+        &__title{
+            font-size: 38px;
+            line-height: 46px;
+            margin-bottom: 29px;
+            text-align: left;
+        }
+        &__description{
+            font-size: 22px;
+            line-height: 150%;
+            margin-bottom: 31px;
+        }
+        &__buttons{
+            display: block;
+        }
+        &__whitelist{
+            margin-top: 21px;
+            max-width: 185px;
+            a{
+                padding: 14px 0;
+            }
+        }
+        &__btn{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        &__community{
+            max-width: 246px;
+            a{
+                padding: 13px 0;
+            }
+        }
+    }
+}

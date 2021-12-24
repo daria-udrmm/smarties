@@ -1,0 +1,197 @@
+.mint{
+    &__block{
+        max-width: 500px;
+        padding: 32px 50px;
+        background: #FFFFFF;
+        border: 3px solid #161101;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 0px #161101;
+        border-radius: 60px;
+        opacity: 0;
+        animation: opacity 1s forwards;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes opacity {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    &__date{
+        display: flex;
+        align-items: center;
+        grid-gap: 7px;
+    }
+    &__what{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #607C99;
+    }
+    &__month{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: #FF5D51;        
+    }
+    &__sale{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        color: #607C99;
+        margin-bottom: 10px;    
+    }
+    &__price{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        color: #F2574D;
+        span{
+            color: #2D445B;
+        } 
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom:25px;
+    }
+    &__presale{
+        border: 3px solid #161101;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 20px 20px 17px;
+        & + &{
+            margin-top: 10px;
+        }
+    }
+    &__white{
+        opacity: 0.3;
+        display: none;
+    }
+    &__cost{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 37px;
+        text-align: center;
+        color: #2D445B;
+        margin-bottom: 2px;
+    }
+    &__limit{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        color: #607C99;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        color: #2D445B;
+        margin-bottom: 9px;
+    }
+    &__day{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: right;
+        color: #FF5D51;
+    }
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__btn{
+        background: #FF5D51;
+        box-shadow: 3px 4px 0px #A81F1F;
+        border-radius: 20px;
+        max-width: 220px;
+        width: 100%;
+        text-align: center;
+        font-weight: 800;
+        font-size: 26px;
+        line-height: 32px;
+        color: #FFFFFF;
+        text-shadow: -3px 2px 0px #423231;
+        a{
+            padding: 14px 0;
+        }
+    }
+    &__back{
+        max-width: 44px;
+        width: 100%;
+        margin-right: 64px;
+        img{
+            width: 100%;
+        }
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1024px){
+    .mint{
+        &__block{
+            max-width: 100%;
+            padding: 30px 27px;
+        }
+        &__title{
+            margin-bottom: 11px;
+        }
+    }
+}
+@media (max-width: 576px){
+    .mint{
+        &__block{
+            animation: opacity 2s forwards;
+            padding:30px  10px;
+        }
+        &__flex{
+            align-items: center;
+        }
+        &__sale{
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 22px;
+            margin-bottom: 15px;
+        }
+        &__cost{
+            font-size: 25px;
+            line-height: 27px;
+            margin-bottom: 2px;
+        }
+        &__price{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__presale{
+            padding: 20px 10px;
+        }
+        &__white{
+            display: none;
+        }
+        &__btn{
+            max-width: 274px;
+        }
+        &__buttons{
+            justify-content: center;
+        }
+        &__back{
+            margin-right: 21px;
+        }
+        &__top{
+            padding: 0;
+        }
+    }
+}

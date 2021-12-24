@@ -1,0 +1,284 @@
+.team{
+    padding: 139px 0 0;
+    position: relative;
+    &::after{
+        position: absolute;
+        background: #A4C8ED;
+        width: 100%;
+        content: '';
+        height: 40%;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &__inner{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: 'Our Team';
+            top: 13%;
+            z-index: -1;
+            font-weight: 900;
+            font-size: 190px;
+            line-height: 232px;
+            color: #A4C8ED;
+            text-shadow: 10px 14px 0px #93B6D9;
+        }
+    }
+    &__title{
+        text-align: left;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 61px;
+        color: #2D445B;
+        margin-bottom: 25px;
+    }
+    &__description{
+        font-size: 22px;
+        line-height: 150%;
+        text-align: left;
+        color: #2D445B;
+        max-width: 725px;
+    }
+    &__wrapper{
+        display: flex;
+        grid-gap: 31px;
+        justify-content: left;
+        height: 514px;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 109px;
+    }
+    &__btn{
+        background: #F2574D;
+        box-shadow: 3px 4px 0px #A81F1F;
+        border-radius: 20px;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        max-width: 172px;
+        width: 100%;
+        text-align: center;  
+        color: #FFFFFF;
+        transition: all .3s;
+        a{
+            width: 100%;
+            padding: 19px 0;
+        }
+        &:hover{
+            background-color: #c9473e;
+        } 
+    }
+    &__item{
+        padding: 0;
+        border-radius: 180px;
+        background: #fff;
+        max-width: 330px;
+        max-height: 330px;
+        width: 100%;
+        text-align: center;
+        transition: all 1s;
+        cursor: pointer;
+        &:hover{
+            max-width: 370px;
+            max-height: 370px;
+            padding: 20px 20px 30px;
+            border-radius: 180px 180px 60px 60px;
+            max-height: 100%;
+            margin-top: -80px;
+            .team{
+                &__image{
+                    margin-bottom: 18px;
+                }
+                &__social{
+                    display: flex;
+                    animation: opac .9s linear forwards;
+                }
+                &__name{
+                    display: block;
+                    animation: opac .9s linear forwards;
+                }
+            }
+        }
+    }
+    &__image{
+        max-width: 330px;
+        width: 100%;
+        margin-bottom: 18px;
+        margin-bottom: 0;
+        img{
+            width: 100%;
+        }
+    }
+    &__name{
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        color: #2D445B;
+        margin-bottom: 44px;
+        display: none;
+        opacity: 0;
+    }
+    &__social{
+        display: flex;
+        display: none;
+        max-width: 180px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0;
+        img{
+            max-width: 40px;
+            width: 100%;
+        }
+    }
+    @keyframes opac {
+        0%{
+            opacity: 0;
+        }
+        55% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .team{
+        &__item{
+            max-width: 300px;
+            max-height: 300px;
+        }
+        &__inner{
+            &::after{
+                font-size: 170px;
+                line-height: 150%;
+            }
+        }
+        &::after{
+            bottom: -10px;
+        }
+        &__wrapper{
+            height: 490px;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .team{
+        &__inner{
+            &::after{
+                font-size: 119px;
+            }
+        }
+        &__item{
+            max-height: 44%;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .team{
+        padding-top: 100px;
+        &__item{
+            max-width: 200px;
+            &:hover{
+                padding: 10px 10px 15px;
+            }
+        }
+        &__wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            height: 370px;
+        }
+        &__inner{
+            &::after{
+                top: 17%;
+                font-size: 120px;
+            }
+        }
+        &__info{
+            grid-gap: 40px;
+        }
+        &__description{
+            font-size: 20px;
+        }
+        &__name{
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .team{
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding-top: 41px;
+        & > div{
+            padding-right: 0;
+            padding-left: 0;
+        }
+        &::after{
+            bottom: -78px;
+        }
+        &__title{
+            font-size: 38px;
+            line-height: 46px;
+            padding: 0 20px;
+            margin-bottom: 29px;
+            text-align: left;
+        }
+        &__description{
+            font-size: 22px;
+            padding: 0 20px;
+        }
+        &__info{
+            display: block;
+            margin-bottom: 60px;
+        }
+        &__btn{
+            margin: 31px 20px 0;
+        }
+        &__inner{
+            &::after{
+                font-size: 60px;
+                top: 41%;
+                left: 20%;
+                white-space: nowrap;
+                transform: scale(1.4);
+            }
+        }
+        &__wrapper{
+            padding-top: 80px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            grid-template-columns: repeat(3, 200px);
+            height: 400px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        &__item{
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 32px;
+            &:hover{
+                .team{
+                    &__image{
+                        margin-bottom: 0;
+                    }
+                    &__name{
+                        margin-bottom: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
