@@ -50,7 +50,7 @@ const First = () => {
                 <div className='container'>
                     <div className={style.first__inner}>
                         <div className={style.first__left}>
-                            {clicked ? <Mint changeClicked={changeClicked}/> : <Info changeClicked={changeClicked}/> }
+                            {clicked ? <Mint changeClicked={changeClicked} clicked={clicked}/> : <Info changeClicked={changeClicked}/> }
                         </div>
                         <div className={clicked? style.first__another : style.first__right}>
                             <div className={clicked? style.first__another : style.first__image}>

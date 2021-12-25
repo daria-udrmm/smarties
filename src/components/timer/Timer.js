@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Clock from "../clock/Clock";
 
-function Timer() {
+function Timer(props) {
   const [timerDays, setTimerDays] = useState();
   const [timerHours, setTimerHours] = useState();
   const [timerMinutes, setTimerMinutes] = useState();
@@ -10,7 +10,7 @@ function Timer() {
   let interval;
 
   const startTimer = () => {
-    const countDownDate = new Date("December 31 2021 12:00").getTime();
+    const countDownDate = new Date("December 25 2021 17:25").getTime();
 
     interval = setInterval(() => {
       const now = new Date().getTime();
@@ -27,7 +27,7 @@ function Timer() {
       if (distance < 0) {
         // Stop Timer
 
-        clearInterval(interval.current);
+        clearInterval(interval);
       } else {
         // Update Timer
         setTimerDays(days);
@@ -38,8 +38,12 @@ function Timer() {
     });
   };
 
+  
+
   useEffect(() => {
     startTimer();
+
+    return () => clearInterval(interval)
   });
 
   return (

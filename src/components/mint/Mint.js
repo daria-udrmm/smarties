@@ -3,7 +3,6 @@ import back from '../../resources/img/back.png'
 import Timer from '../timer/Timer';
 
 const Mint = (props) => {
-    
 
     const clickedButton = (e) => {
         e.preventDefault();
@@ -41,7 +40,7 @@ const Mint = (props) => {
                             <div className={styles.mint__limit}>Limit per wallet: 3</div>
                         </div>
                     </div>
-                    <Timer/>
+                    <Timer clicked={props.clicked}/>
                 </div>
                 <div className={`${styles.mint__presale} ${styles.mint__white}`}>
                     <div className={styles.mint__flex}>
